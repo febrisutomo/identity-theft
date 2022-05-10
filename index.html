@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Identity Theft - Tugas Kommas</title>
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.html">Febri Sutomo</a></h1>
+
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">Identity Theft</a></li>
+          <li><a class="nav-link scrollto" href="#services">Email Phising</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div data-aos="fade-right" data-aos-delay="100" class="col-lg-6 pt-2 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+          <h1>Identity Theft</h1>
+          <ul>
+            <li><i class="ri-check-line"></i> Apa itu identity Theft?</li>
+            <li><i class="ri-check-line"></i> Cara melindungi diri dari identity Theft</li>
+            <li><i class="ri-check-line"></i> Cara mengenali email phising</li>
+          </ul>
+          <div class="mt-3">
+            <a href="#about" class="btn-get-started scrollto">Selengkapnya</a>
+            <!-- <a href="" class="btn-get-quote">Request a Quote</a> -->
+          </div>
+        </div>
+        <div data-aos="fade-up" class="col-lg-6 order-1 order-lg-2 hero-img">
+          <img src="/assets/img/Data_security_24.jpg" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <h2>Apa itu Identity Theft?</h2>
+            <h3>Identity theft atau pencurian identitas adalah kejahatan yang dilakukan dengan menyalahgunakan
+              identitas orang lain untuk memperoleh keuntungan.</h3>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              Kejahatan dengan mengatasnamakan orang lain ini terjadi ketika pelaku menggunakan informasi pribadi
+              seseorang, seperti nama, identitas kependudukan,
+              nomor kartu kredit, dan lainnya tanpa ada persetujuan.
+            </p>
+            <p class="mb-0">Beberapa teknik yang digunakan untuk mencuri identitas atau data keaungan yaitu sebagai
+              berikut.</p>
+
+            <ul>
+              <li><i class="ri-check-double-line"></i> Phishing - memancing email untuk informasi pribadi dan keuangan
+                yang disamarkan sebagai email bisnis yang sah</li>
+              <li><i class="ri-check-double-line"></i> Pharming - situs Web palsu yang mencari informasi pribadi dan
+                keuangan dengan menanam URL palsu di Server Nama Domain</li>
+              <li><i class="ri-check-double-line"></i> Resume online dan situs pencarian pekerjaan dapat mengungkapkan
+                SSN, riwayat pekerjaan, tanggal lahir, dan informasi lain yang dapat digunakan dalam pencurian identitas
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Features Section ======= -->
+    <section data-aos="fade-up">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Melindungi Diri dari Identity Theft</h2>
+          <p>Ada beberapa cara yang dapat membantu melindungi diri dari pencurian data identitas atau penyalahgunaan
+            kartu kredit.</p>
+        </div>
+
+        <div v-for="(p, i) of protectIdentity" :key="i" class="row content align-items-center">
+          <div class="col-md-5" :class="{'order-md-1': i % 2 == 1}" data-aos="fade-right" data-aos-delay="100">
+            <img :src="`assets/img/identity-protection/${p.img}`" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-4" :class="{'order-md-1': i % 2 == 0}" data-aos="fade-left" data-aos-delay="100">
+            <h3>{{p.title }}</h3>
+            <p>
+              {{ p.content }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Deteksi Email Phising</h2>
+          <p>Berikut beberapa cara untuk mengidentifikasi apakah email yang anda terima adalah email phising</p>
+        </div>
+
+        <div class="row">
+          <div class="content col-xl-5 d-flex flex-column justify-content-center">
+            <img src="assets/img/editable-flat-design-mobile-phishing-illustration_203633-3612.jpg" class="img-fluid"
+              alt="">
+          </div>
+          <div class="col-xl-7">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+
+                <div v-for="(p, i) of phisingDetection" :key="i" class="col-lg-6 d-flex align-items-stretch mb-4"
+                  data-aos="zoom-in">
+                  <div class="icon-box iconbox-blue">
+                    <!-- <div class="icon"> -->
+                    <img :src="`/assets/img/phising-detection/${p.img}`" class="img-fluid" alt="">
+                    <h4><a href="">{{ p.title }}</a></h4>
+                    <p>{{ p.content }}</p>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <!-- <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Resi.</h3>
+            <p>
+              A108 Adam Street <br>
+              New York, NY 535022<br>
+              United States <br><br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Join Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div> -->
+
+    <div class="container text-center py-4">
+
+      <div class="me-md-auto text-center">
+        <div class="copyright">
+          &copy; 2022 Tugas Komputer dan Masyarakat. <a href="#">Febri Sutomo (H1D019004)</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+  <script src="https://unpkg.com/vue@3"></script>
+
+  <script>
+    AOS.init();
+  </script>
+
+  <script>
+    const { createApp } = Vue
+
+    createApp({
+      data() {
+        return {
+          message: 'Hello Vue!',
+          protectIdentity: [
+            {
+              title: "Amankan Hard Copy Anda",
+              content: "Setiap dokumen sensitif harus disimpan di brankas. Kartu kredit dan kartu debit harus selalu disimpan dengan aman di dompet Anda,  Hancurkan semua dokumen lama yang berisi informasi sensitif.",
+              img: "hard-copy.jpg",
+            },
+            {
+              title: "Periksa Laporan Keuangan Anda",
+              content: "Tinjau laporan keuangan Anda setiap bulan dan periksa dengan cermat apakah ada aktivitas penipuan. Laporkan segera biaya yang mencurigakan. Aktifkan pesan peringatan dan membatasi aktivitas kartu kredit Anda ke wilayah geografis tertentu.",
+              img: "financial-report.jpg",
+            },
+            {
+              title: "Pilih Kata Sandi yang Kuat",
+              content: "Gunakan kata sandi yang berbeda dan kuat untuk setiap akun dan perangkat Anda.  Gunakan layanan kata sandi yang aman, seperti LastPass, untuk membuat dan menyimpan kata sandi unik.",
+              img: "strong-password.jpg",
+            },
+            {
+              title: "Lindungi Komputer Anda",
+              content: "Investasikan dalam program anti-spyware yang kuat untuk melindungi perangkat keras Anda dari peretas. Enkripsi hard drive Anda untuk tingkat perlindungan ekstra.",
+              img: "secure-pc.jpg",
+            },
+            {
+              title: "Berhati-hatilah terhadap Email dan Situs Web yang Mencurigakan",
+              content: "Jangan membuka email yang tampak mencurigakan atau mengeklik tautan untuk situs yang tidak dikenal. Jika kotak masuk Anda dibanjiri email promosi, berhenti berlangganan dari beberapa di antaranya.",
+              img: "suspicious-email.jpg",
+            },
+            {
+              title: "Gunakan Identifikasi Dua Faktor",
+              content: "Langkah masuk ekstra akan membantu menangkal scammers dan menambahkan lapisan keamanan lain ke akun Anda.  Jangan pernah memilih opsi ingat kata sandi untuk situs yang melibatkan pembayaran",
+              img: "two-factor.jpg",
+            },
+            {
+              title: "Hindari Wi-Fi Public",
+              content: "Wi-Fi public adalah tempat berburu para pencuri identitas. Sebisa mungkin hindari jika Anda bisa. Setidaknya, hindari semua perbankan online atau login kata sandi saat menggunakan Wi-Fi publik.",
+              img: "public-wifi.jpg",
+            }
+
+          ],
+          phisingDetection: [
+            {
+              title: "Periksa Alamat Email Pengirim",
+              content: "Ketika menerima email, selalu cek apakah alamat email pengirim terlihat sah. Kurangnya detail perusahaan sangat mengindikasikan adanya phising",
+              img: "phising-detection-1.png",
+            },
+            {
+              title: "Email Tidak Bersifat Personal",
+              content: "Hati-hati kepada email yang tidak bersifat personal. Pastikan email ditujukan kepada nama anda",
+              img: "phising-detection-2.png",
+            },
+            {
+              title: "Hati-hati dengan Kata-kata Manipulatif ",
+              content: 'Jangan pernah merespon email yang meminta informasi personal dan menggunakan kata-kata seperti "URGENT" atau "FINAL NOTICE"',
+              img: "phising-detection-4.png",
+            },
+            {
+              title: "Pastikan Web Sudah HTTPS atau Secure",
+              content: 'Pada web, lihat pada https di alamat web atau ikon gembok di jendela browser. Jika situs tidak secure, jangan berikan data pribadi apapun',
+              img: "phising-detection-5.png",
+            },
+          ]
+        }
+      }
+    }).mount('#main')
+  </script>
+
+</body>
+
+</html>
